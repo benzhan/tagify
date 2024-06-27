@@ -216,7 +216,7 @@ export default {
 
         // if the dropdown has yet to be appended to the DOM,
         // append the dropdown to the body element & handle events
-        if( !this.settings.dropdown.appendTarget.contains(this.DOM.dropdown) ){
+        if( !appendTarget.contains(this.DOM.dropdown) ){
             this.DOM.dropdown.classList.add( _s.classNames.dropdownInital )
             this.dropdown.position(ddHeight)
             appendTarget.appendChild(this.DOM.dropdown)

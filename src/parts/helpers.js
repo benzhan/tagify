@@ -197,7 +197,7 @@ export function unaccent( s ){
 export function getNodeHeight( node ){
     var height, clone = node.cloneNode(true)
     clone.style.cssText = "position:fixed; top:-9999px; opacity:0"
-    this.settings.dropdown.appendTarget.appendChild(clone)
+    document.body.appendChild(clone)
     height = clone.clientHeight
     clone.parentNode.removeChild(clone)
     return height
