@@ -1669,7 +1669,7 @@ Tagify.prototype = {
 
                 function animation( tag ){
                     tag.node.style.width = parseFloat(window.getComputedStyle(tag.node).width) + 'px'
-                    document.body.clientTop // force repaint for the width to take affect before the "hide" class below
+                    this.settings.dropdown.appendTarget.clientTop // force repaint for the width to take affect before the "hide" class below
                     tag.node.classList.add(_s.classNames.tagHide)
 
                     // manual timeout (hack, since transitionend cannot be used because of hover)

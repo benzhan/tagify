@@ -132,7 +132,7 @@ export default {
             },
             {
                 type: 'click',
-                target: document,
+                target: this.settings.dropdown.appendTarget,
                 cb: _CB.onClickAnywhere.bind(this),
                 useCapture: true
             },
