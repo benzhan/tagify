@@ -346,8 +346,9 @@ Tagify.prototype = {
 
             else{
                 try{
-                    if( JSON.parse(value) instanceof Array )
-                        value = JSON.parse(value)
+                    let tmp = JSON.parse(value)
+                    if( tmp instanceof Array )
+                        value = tmp
                 }
                 catch(err){}
                 this.addTags(value, true).forEach(tag => tag && tag.classList.add(_s.classNames.tagNoAnimation))

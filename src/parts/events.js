@@ -843,7 +843,11 @@ export default {
                         result = pastedText;
 
                     if( result ){
-                        this.injectAtCaret(result, window.getSelection().getRangeAt(0))
+                        // this.injectAtCaret(result, window.getSelection().getRangeAt(0))
+                        
+                        let root = e.currentTarget.getRootNode()
+                        console.log("result:", result,  ", root: ", root)
+                        this.injectAtCaret(result, root.getSelection().getRangeAt(0))
 
                         if( this.settings.mode == 'mix' ){
                             this.events.callbacks.onMixTagsInput.call(this, e);
